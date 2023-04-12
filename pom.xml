@@ -17,7 +17,6 @@
 	<description>Multimodule Spring App</description>
 	<modules>
 		<module>PayAmigo</module>
-		<module>Persistance</module>
 		<module>Authy</module>
 		<module>Bowser</module>
         <module>Proxy</module>

@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: myconfig
+
+zuul:
+  routes:
+    users-create:
+      path: /user/create
+      url:  http://localhost:8080/api/auth/signup
+    users-signin:
+      path: /user/signin
+      url:  http://localhost:8080/api/auth/signin
+    users-logout:
+      path: /user/logout
+      url: http://localhost:8080/api/auth/signout
+    wallet-create:
+      path: /wallet/create
+      url: http://localhost:8080/api/test/wallets/attach
+    transaction-create:
+      path: /transaction/new-sc-transaction
+      url: http://localhost:8080/api/test/transactions/new-sc-transaction

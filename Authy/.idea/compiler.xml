@@ -2,29 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Proxy" />
-        <module name="Authy" />
-        <module name="Bowser" />
-        <module name="PayAmigo" />
+        <module name="spring-boot-login-example" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Persistance" target="19" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="App" options="" />
-      <module name="Authy" options="-parameters" />
-      <module name="Bowser" options="-parameters" />
-      <module name="PayAmigo" options="-parameters" />
-      <module name="Persistance" options="-parameters" />
-      <module name="Proxy" options="-parameters" />
+      <module name="spring-boot-login-example" options="-parameters" />
     </option>
   </component>
 </project>
