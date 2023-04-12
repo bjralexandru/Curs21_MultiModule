@@ -1,8 +1,8 @@
-package bjr.spring.login.repository;
+package bjr.spring.login.Repository;
 
 import java.util.Optional;
 
-import bjr.spring.login.models.User;
+import bjr.spring.login.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

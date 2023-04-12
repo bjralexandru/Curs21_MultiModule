@@ -1,4 +1,4 @@
-package bjr.spring.login.security.jwt;
+package bjr.spring.login.Security.jwt;
 
 import java.io.IOException;
 
@@ -7,7 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bjr.spring.login.security.services.UserDetailsServiceImpl;
+import bjr.spring.login.Security.services.UserDetailsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

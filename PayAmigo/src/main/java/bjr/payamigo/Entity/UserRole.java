@@ -1,6 +1,6 @@
 package bjr.payamigo.Entity;
 
-public enum ERole {
+public enum UserRole {
   ROLE_USER,
   ROLE_MODERATOR,
   ROLE_ADMIN

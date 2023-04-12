@@ -19,7 +19,6 @@
 		<module>PayAmigo</module>
 		<module>Authy</module>
 		<module>Bowser</module>
-        <module>Proxy</module>
     </modules>
 	<properties>
 		<java.version>17</java.version>

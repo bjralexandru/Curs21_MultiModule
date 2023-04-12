@@ -1,6 +1,6 @@
-package bjr.spring.login.security.services;
+package bjr.spring.login.Security.services;
 
-import bjr.spring.login.models.User;
+import bjr.spring.login.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import bjr.spring.login.repository.UserRepository;
+import bjr.spring.login.Repository.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

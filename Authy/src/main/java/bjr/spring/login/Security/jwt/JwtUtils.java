@@ -1,4 +1,4 @@
-package bjr.spring.login.security.jwt;
+package bjr.spring.login.Security.jwt;
 
 import java.util.Date;
 
@@ -12,7 +12,7 @@ import org.springframework.http.ResponseCookie;
 import org.springframework.stereotype.Component;
 import org.springframework.web.util.WebUtils;
 
-import bjr.spring.login.security.services.UserDetailsImpl;
+import bjr.spring.login.Security.services.UserDetailsImpl;
 import io.jsonwebtoken.*;
 
 @Component

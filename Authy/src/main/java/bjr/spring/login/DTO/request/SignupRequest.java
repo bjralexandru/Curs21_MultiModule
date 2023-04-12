@@ -1,6 +1,4 @@
-package bjr.spring.login.payload.request;
-
-import java.util.Set;
+package bjr.spring.login.DTO.request;
 
 import javax.validation.constraints.*;
  

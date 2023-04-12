@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Proxy" />
         <module name="Authy" />
         <module name="Bowser" />
         <module name="PayAmigo" />
@@ -15,6 +14,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Persistance" target="19" />
+      <module name="Proxy" target="19" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

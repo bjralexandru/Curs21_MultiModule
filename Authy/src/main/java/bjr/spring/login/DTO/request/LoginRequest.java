@@ -1,4 +1,4 @@
-package bjr.spring.login.payload.request;
+package bjr.spring.login.DTO.request;
 
 import javax.validation.constraints.NotBlank;
 

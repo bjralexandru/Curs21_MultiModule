@@ -1,4 +1,4 @@
-package bjr.spring.login.controllers;
+package bjr.spring.login.Controller;
 
 import java.util.HashSet;
 import java.util.List;
@@ -7,15 +7,15 @@ import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
-import bjr.spring.login.models.ERole;
-import bjr.spring.login.models.Role;
-import bjr.spring.login.models.User;
-import bjr.spring.login.payload.request.LoginRequest;
-import bjr.spring.login.payload.request.SignupRequest;
-import bjr.spring.login.payload.response.MessageResponse;
-import bjr.spring.login.payload.response.UserInfoResponse;
-import bjr.spring.login.security.jwt.JwtUtils;
-import bjr.spring.login.security.services.UserDetailsImpl;
+import bjr.spring.login.Entity.UserRole;
+import bjr.spring.login.Entity.Role;
+import bjr.spring.login.Entity.User;
+import bjr.spring.login.DTO.request.LoginRequest;
+import bjr.spring.login.DTO.request.SignupRequest;
+import bjr.spring.login.DTO.response.MessageResponse;
+import bjr.spring.login.DTO.response.UserInfoResponse;
+import bjr.spring.login.Security.jwt.JwtUtils;
+import bjr.spring.login.Security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -32,8 +32,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import bjr.spring.login.repository.RoleRepository;
-import bjr.spring.login.repository.UserRepository;
+import bjr.spring.login.Repository.RoleRepository;
+import bjr.spring.login.Repository.UserRepository;
 import org.springframework.web.client.RestTemplate;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -101,7 +101,7 @@ public class AuthController {
 
     if (roleNames == null) {
 
-      Role userRole = roleRepository.findByName(ERole.ROLE_USER)
+      Role userRole = roleRepository.findByName(UserRole.ROLE_USER)
               .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
       roles.add(userRole);
     } else {
@@ -109,17 +109,17 @@ public class AuthController {
       for(String roleName : roleNames) {
         switch (roleName) {
           case "admin":
-            Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)
+            Role adminRole = roleRepository.findByName(UserRole.ROLE_ADMIN)
                     .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
             roles.add(adminRole);
             break;
           case "mod":
-            Role modRole = roleRepository.findByName(ERole.ROLE_MODERATOR)
+            Role modRole = roleRepository.findByName(UserRole.ROLE_MODERATOR)
                     .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
             roles.add(modRole);
             break;
           default:
-            Role userRole = roleRepository.findByName(ERole.ROLE_USER)
+            Role userRole = roleRepository.findByName(UserRole.ROLE_USER)
                     .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
             roles.add(userRole);
         }

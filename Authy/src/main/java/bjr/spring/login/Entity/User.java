@@ -1,4 +1,4 @@
-package bjr.spring.login.models;
+package bjr.spring.login.Entity;
 
 import java.util.HashSet;
 import java.util.Set;

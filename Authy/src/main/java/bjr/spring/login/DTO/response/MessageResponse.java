@@ -1,4 +1,4 @@
-package bjr.spring.login.payload.response;
+package bjr.spring.login.DTO.response;
 
 public class MessageResponse {
 	private String message;

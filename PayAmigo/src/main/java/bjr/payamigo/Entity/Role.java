@@ -11,13 +11,13 @@ public class Role {
 
   @Enumerated(EnumType.STRING)
   @Column(length = 20)
-  private ERole name;
+  private UserRole name;
 
   public Role() {
 
   }
 
-  public Role(ERole name) {
+  public Role(UserRole name) {
     this.name = name;
   }
 
@@ -29,11 +29,11 @@ public class Role {
     this.id = id;
   }
 
-  public ERole getName() {
+  public UserRole getName() {
     return name;
   }
 
-  public void setName(ERole name) {
+  public void setName(UserRole name) {
     this.name = name;
   }
 }

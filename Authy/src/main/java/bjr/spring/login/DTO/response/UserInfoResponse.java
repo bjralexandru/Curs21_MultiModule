@@ -1,4 +1,4 @@
-package bjr.spring.login.payload.response;
+package bjr.spring.login.DTO.response;
 
 import java.util.List;
 

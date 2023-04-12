@@ -1,4 +1,4 @@
-package bjr.spring.login.controllers;
+package bjr.spring.login.Controller;
 
 import bjr.payamigo.DTO.TransactionRequest;
 import bjr.payamigo.Entity.User;
@@ -23,19 +23,19 @@ public class TestController {
   @GetMapping("/user")
   @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
   public String userAccess() {
-    return "User Content.";
+    return "All users can see this!";
   }
 
   @GetMapping("/mod")
   @PreAuthorize("hasRole('MODERATOR')")
   public String moderatorAccess() {
-    return "Moderator Board.";
+    return "Moderators can see this prompt.";
   }
 
   @GetMapping("/admin")
   @PreAuthorize("hasRole('ADMIN')")
   public String adminAccess() {
-    return "Admin Board.";
+    return "Admin only space!";
   }
 
   @PostMapping("/wallets/attach")
